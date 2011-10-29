@@ -4,15 +4,18 @@ AdjustIframeHeight
 ## Summary
 
 An extra light weight pure JavaScript library to automatically adjust
-the iframe height to its contents height. What you need is just write
-a script tag to load adjustiframeheight.js in the inner page.
+the iframe height to its contents height.
+
+What you need is just write a script tag to load adjustiframeheight.js in the inner page.
+
 Supports periodical updates of the height of the iframe.
 
 
 ## Browser Support
 
-* Almost all modern browsers
-	Tested manually on
+* Almost all modern browsers.
+
+* Tested manually on:
 	* Firefox 7, 8
 	* Chrome 14
 	* Safari 5
@@ -26,8 +29,10 @@ Supports periodical updates of the height of the iframe.
 
 -- The outer page --
 
+```
 	<html>
 	<head>
+		...
 	</head>
 	<body>
 		...
@@ -35,10 +40,12 @@ Supports periodical updates of the height of the iframe.
 		...
 	</body>
 	</html>
+```
 
 
 -- The inner page --
 
+```
 	<html>
 	<head>
 		...
@@ -49,6 +56,7 @@ Supports periodical updates of the height of the iframe.
 		...
 	</body>
 	</html>
+```
 
 * That's all.
 
@@ -65,7 +73,7 @@ Supports periodical updates of the height of the iframe.
 ## Version
 
 * v1.0 / 2011-10-29
-	Initial release.
+	* Initial release.
 
 
 ## License - "Apache License 2.0"

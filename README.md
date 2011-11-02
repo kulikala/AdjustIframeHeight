@@ -69,6 +69,9 @@ Supports periodical updates of the height of the iframe.
   or the inner page comes from local, i.e. the protocol is file:.
   This script works fine with local files in Firefox, Safari, Opera, and IE.
 
+* Do not set margin to the root html element of the inner page.
+  This script cannot handle the margin except Firefox.
+
 
 ## Version
 

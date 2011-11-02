@@ -72,6 +72,10 @@ Supports periodical updates of the height of the iframe.
 
 ## Version
 
+* v1.0.1 / 2011-11-02
+	* Modified the height calculating logic so that the iframe can shrink
+	  its height when the content shrunk.
+
 * v1.0 / 2011-10-29
 	* Initial release.
 

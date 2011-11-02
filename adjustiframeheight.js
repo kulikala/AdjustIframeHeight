@@ -19,19 +19,31 @@ var AdjustHeight = {
 		
 		window.document.body.style.overflow = 'hidden';
 		
-		var lastHeight = 0;
+		var lastHeight = {
+			scroll: 0,
+			offset: 0
+		};
 		var adjustHeight = function () {
-			var currentHeight = window.document.documentElement.scrollHeight;
+			var currentHeight = {
+				scroll: window.document.documentElement.scrollHeight,
+				offset: window.document.documentElement.offsetHeight
+			};
 			
-			if ( currentHeight != lastHeight ) {
-				window.frameElement.style.height = currentHeight + 'px';
+			var prop;
+			if ( currentHeight.scroll != lastHeight.scroll ) {
+				prop = 'scroll';
+			} else if ( currentHeight.offset < lastHeight.offset ) {
+				prop = 'offset';
+			}
+			if ( prop ) {
+				window.frameElement.style.height = currentHeight[ prop ] + 'px';
 				
 				lastHeight = currentHeight;
 			}
 		};
 		
 		adjustHeight();
-		setInterval( adjustHeight, 1000 );
+		setInterval( adjustHeight, 500 );
 		
 		if ( window.addEventListener ) {
 			window.addEventListener( 'resize', adjustHeight, false );
